@@ -24,3 +24,9 @@ Node Node::copy() {
     n.setAdjacent(getAdjacent());
     return n;
 }
+
+bool Node::addArc(string head, double weight) {
+	Arc a(head, weight);
+	adjacent.push_back(a);
+	return true;
+}
