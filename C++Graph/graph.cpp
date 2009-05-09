@@ -64,9 +64,22 @@ bool Graph::addArc(Node tail, Node head, double weight) {
 }
 
 bool Graph::addArc(string tail, string head, double weight) {
-    nuArcs++;
-    version++;
-    return false;
+
+	if(contains(tail) && contains(head)) {
+		bool added = false;
+		for (unsigned int i = 0; i < nodeMap.size(); i++) {
+			Node n = nodeMap.at(i);
+			if (n.getName().compare(tail) == 0) {
+				added = n.addArc(head, weight);
+				if (added) {
+					nuArcs++;
+					version++;
+				}
+			}
+		}
+		return added;
+	}
+	return false;
 }
 
 bool Graph::removeArc(Node head, Node tail) {
