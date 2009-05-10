@@ -15,6 +15,8 @@ int main()
 
     Graph g;
 
+    cout << "Just a simple example... " << endl;
+
     cout << "Number of Nodes?";
     cin >> num;
 
