@@ -47,3 +47,12 @@ string Arc::toString() {
 	return oss.str();
 }
 
+bool Arc::equals(Arc a) {
+	if(getHead().compare(a.getHead()) == 0) {
+		if(getWeight() == a.getWeight()) {
+			return true;
+		}
+	}
+	return false;
+}
+

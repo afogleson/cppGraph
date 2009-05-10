@@ -18,7 +18,7 @@ class Arc {
         void setWeight(double);
         Arc copy();
         string toString();
-
+        bool equals(Arc);
 };
 
 

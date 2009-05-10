@@ -17,6 +17,16 @@ class Util {
 		Node find(string);
 		Graph reverseGraph();
 		Graph getPath(string s, string f);
-		int indexOf(string);
+		long indexOf(string);
+		Graph prune(string);
+		vector<vector<int> > getAdjacentMatrix();
+		vector<vector<int> > getNumPathNLong(int);
+		vector<float> getEigenVectorCentrality();
+		Graph prim();
+		Graph dijkstra(string, string);
+		Graph nodeNeighbourHood(string);
+		void save(string);
+		Graph open(string);
+		Graph importGraph(string);
 };
 #endif /* UTIL_H_ */
