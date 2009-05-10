@@ -2,6 +2,13 @@
 
 using namespace std;
 
+Node::Node() {
+}
+
+Node::Node(string n) {
+	name = n;
+}
+
 string Node::getName() {
     return name;
 }

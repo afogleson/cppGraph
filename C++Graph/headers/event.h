@@ -10,30 +10,29 @@
 
 enum Event {
 	/**
-		 * Indicates a Node has been added to the Graph
-		 */
-		Node_Added,
+	 * Indicates a Node has been added to the Graph
+	 */
+	Node_Added,
 
-		/**
-		 * Indicates a Node has been removed to the Graph
-		 */
-		Node_Removed,
+	/**
+	 * Indicates a Node has been removed to the Graph
+	 */
+	Node_Removed,
 
+	/**
+	 * Indicates a Arc has been added to the Graph
+	 */
+	Arc_Added,
 
-		/**
-		 * Indicates a Arc has been added to the Graph
-		 */
-		Arc_Added,
+	/**
+	 * Indicates a Arc has been removed to the Graph
+	 */
+	Arc_Removed,
 
-		/**
-		 * Indicates a Arc has been removed to the Graph
-		 */
-		Arc_Removed,
-
-		/**
-		 * Removes all Arcs from the Graph
-		 */
-		Arc_Reset
+	/**
+	 * Removes all Arcs from the Graph
+	 */
+	Arc_Reset
 };
 
 #endif /* EVENT_H_ */

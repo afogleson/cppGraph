@@ -14,6 +14,8 @@ class Node {
         vector<Arc> adjacent;
 
     public:
+    	Node();
+    	Node(string);
         string getName();
         void setName(string);
         vector<Arc> getAdjacent();

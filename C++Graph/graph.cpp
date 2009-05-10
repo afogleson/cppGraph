@@ -9,11 +9,11 @@ Graph::Graph() {
     version = 0;
 }
 
-Graph::Graph(GraphObserver go) {
+Graph::Graph(const GraphObserver &go) {
     nuNodes = 0;
     nuArcs  = 0;
     version = 0;
-
+    observer = go;
 }
 
 int Graph::getNuArcs() {
@@ -32,6 +32,17 @@ void Graph::addNode(Node n) {
     nodeMap.push_back(n);
     nuNodes++;
 	version++;
+}
+
+bool Graph::addNode(string n) {
+	if (!contains(n)) {
+		Node node(n);
+		nodeMap.push_back(node);
+		nuNodes++;
+		version++;
+		return true;
+	}
+	return false;
 }
 
 bool Graph::removeNode(Node n) {
@@ -136,3 +147,18 @@ void Graph::setGraphObserver(GraphObserver go) {
 GraphObserver Graph::getGraphObserver() {
     return observer;
 }
+
+Node Graph::getNode(string label) {
+	for (unsigned int i = 0; i < nodeMap.size(); i++) {
+		if (nodeMap.at(i).getName().compare(label) == 0) {
+			return nodeMap.at(i);
+		}
+	}
+	Node newNode;
+	return newNode;
+}
+
+vector<Node> Graph::getNodeMap() {
+	return nodeMap;
+}
+

@@ -1,6 +1,7 @@
 #include "headers/arc.h"
 #include <vector>
 #include <string>
+#include <sstream>
 
 using namespace std;
 
@@ -36,3 +37,13 @@ double Arc::getWeight() {
 void Arc::setWeight(double w) {
     weight = w;
 }
+
+string Arc::toString() {
+	string s("Head: ");
+	s.append(head);
+	s.append(" Weight: ");
+	stringstream oss;
+	oss << s << weight;
+	return oss.str();
+}
+
