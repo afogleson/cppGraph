@@ -19,11 +19,14 @@ class Graph {
 
     public:
         Graph();
-        Graph(GraphObserver);
+        Graph(const GraphObserver &);
         int getNuNodes();
         int getNuArcs();
         int getVersion();
+        vector<Node> getNodeMap();
+        Node getNode(string);
         void addNode(Node);
+        bool addNode(string);
         bool removeNode(Node);
         bool removeNode(string);
         vector<Node> getNodes();

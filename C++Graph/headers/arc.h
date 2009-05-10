@@ -17,6 +17,7 @@ class Arc {
         void setHead(string);
         void setWeight(double);
         Arc copy();
+        string toString();
 
 };
 
