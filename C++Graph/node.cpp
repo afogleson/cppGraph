@@ -37,3 +37,22 @@ bool Node::addArc(string head, double weight) {
 	adjacent.push_back(a);
 	return true;
 }
+
+bool Node::equals(Node n) {
+  if(getName().compare(n.getName()) == 0) {
+	  if(getAdjacent().size() == n.getAdjacent().size()) {
+		  for(unsigned int i=0; i<getAdjacent().size(); i++) {
+			  Arc n1 = getAdjacent().at(i);
+			  Arc c1 = n.getAdjacent().at(i);
+			  if(!(n1.equals(c1)) ) {
+				  return false;
+			  }
+		  }
+		  return true;
+	  }
+	  else {
+		  return false;
+  }
+  return false;
+}
+}

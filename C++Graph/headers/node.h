@@ -22,6 +22,7 @@ class Node {
         Node copy();
         void setAdjacent(vector<Arc>);
         bool addArc(string, double);
+        bool equals(Node);
 };
 
 #endif // NODE_H_INCLUDED
