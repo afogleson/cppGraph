@@ -24,8 +24,8 @@ class Marker {
 		void setValue(double);
 		int getOrder();
 		void setOrder(int);
-		bool isPermament();
-		void setPermament(bool);
+		bool isPermanent();
+		void setPermanent(bool);
 };
 
 #endif /* MARKER_H_ */

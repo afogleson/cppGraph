@@ -93,6 +93,14 @@ bool Graph::addArc(string tail, string head, double weight) {
 	return false;
 }
 
+bool Graph::addArc(Node tail, Node head, double weight, bool b) {
+	if (b) {
+		addNode(tail);
+		addNode(head);
+	}
+	return addArc(tail, head, weight);
+}
+
 bool Graph::removeArc(Node head, Node tail) {
     string h = head.getName();
     string t = tail.getName();
