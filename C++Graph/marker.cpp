@@ -50,11 +50,11 @@ void Marker::setOrder(int o) {
 	order = order;
 }
 
-bool Marker::isPermament() {
+bool Marker::isPermanent() {
 	return permanent;
 }
 
-void Marker::setPermament(bool p) {
+void Marker::setPermanent(bool p) {
 	permanent = p;
 }
 

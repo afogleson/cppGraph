@@ -32,6 +32,7 @@ class Graph {
         vector<Node> getNodes();
         bool addArc(Node , Node , double );
         bool addArc(string, string, double);
+        bool addArc(Node, Node, double, bool);
         bool removeArc(Node, Node);
         bool removeArc(string, string);
         void removeRef(string);

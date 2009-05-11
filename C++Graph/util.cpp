@@ -1,5 +1,6 @@
 #include "headers/util.h"
 #include "headers/graph.h"
+#include "headers/dijkstra.h"
 
 Util::Util() {
 }
@@ -133,6 +134,7 @@ Graph Util::prune(string start) {
 
 vector<vector<int> > Util::getNumPathNLong(int) {
 	vector<vector<int> > path;
+
  	return path;
 }
 
@@ -147,12 +149,23 @@ Graph Util::prim() {
 }
 
 Graph Util::dijkstra(string start, string end) {
-	Graph g;
-	return g;
+	Dijkstra d;
+	d.setGraph(graph);
+	Graph g = d.run(start);
+	Util util;
+	util.setGraph(g);
+	g = util.reverseGraph();
+	util.setGraph(g);
+	return util.getPath(start, end);
 }
 
 Graph Util::nodeNeighbourHood(string start) {
 	Graph g;
+	Node n = find(start);
+	g.addNode(n);
+	for (unsigned int i = 0; i < n.getAdjacent().size(); i++) {
+		g.addArc(n.getName(), n.getAdjacent().at(i).getHead(), n.getAdjacent().at(i).getWeight(), true);
+	}
 	return g;
 }
 
